@@ -20,10 +20,10 @@ Merci de lister tous les membres de l’équipe ayant effectivement participé a
 
 #### Membre 2
 
-- nom : *(à renseigner)*
-- prénom(s) : *(à renseigner)*
+- nom : ANDRIANTSOA
+- prénom(s) : Velotiana Todisoa Angelo
 - classe : Master 1 ML & DS
-- numéro : *(à renseigner)*
+- numéro : 22
 - rôle : Data Analyst — EDA (cible, manquants, scénarios d’annulation, figures)
 
 #### Membre 3
