@@ -108,7 +108,7 @@ classification binaire, annulation hôtelière, validation temporelle, F1-score,
 **🔗 Liens utiles :**
 
 - [**LIEN VERS LA VIDÉO DE PRÉSENTATION** — à publier (Drive/YouTube)](https://www.youtube.com/)
-- [Lien vers le dépôt GitHub](https://github.com/)
+- [Lien vers le dépôt GitHub](https://github.com/FetraFex/atlantic-haven-ml-exam-s2)
 
 ---
 
