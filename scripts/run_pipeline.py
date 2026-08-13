@@ -279,7 +279,7 @@ def main() -> dict:
             )
     pd.DataFrame(region_stats).to_csv(PROCESSED_DIR / "perf_sous_groupes.csv", index=False)
 
-    # Importance
+
     X_va, y_va = prepare_xy(va)
     try:
         pi = permutation_importance(
