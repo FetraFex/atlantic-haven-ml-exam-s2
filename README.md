@@ -12,7 +12,7 @@ Merci de lister tous les membres de l’équipe ayant effectivement participé a
 
 #### Membre 1
 
-- nom : ANDRIAMAHEFA 
+- nom : ANDRIAMAHEFA
 - prénom(s) : Ny Fetra Phanoël
 - classe : IGGLIA 4
 - numéro : 16
@@ -52,7 +52,7 @@ Merci de lister tous les membres de l’équipe ayant effectivement participé a
 
 #### Membre 6
 
-- nom : NOMESAHANINA 	
+- nom : NOMESAHANINA
 - prénom(s) : Aiky
 - classe : IGGLIA 4
 - numéro : 35
@@ -60,7 +60,7 @@ Merci de lister tous les membres de l’équipe ayant effectivement participé a
 
 #### Membre 7
 
-- nom : RAKOTOARISOA 
+- nom : RAKOTOARISOA
 - prénom(s) : Fanaja Manoa Ny Avo
 - classe : IGGLIA 4
 - numéro : 32
@@ -107,7 +107,7 @@ classification binaire, annulation hôtelière, validation temporelle, F1-score,
 
 **🔗 Liens utiles :**
 
-- [**LIEN VERS LA VIDÉO DE PRÉSENTATION** — à publier (Drive/YouTube)](https://www.youtube.com/)
+- [**LIEN VERS LA VIDÉO DE PRÉSENTATION**](https://drive.google.com/file/d/1pKy7dsmJyHRQVWXqkMIkwZRIISPwsC9D/view?usp=sharing)
 - [Lien vers le dépôt GitHub](https://github.com/FetraFex/atlantic-haven-ml-exam-s2)
 
 ---
