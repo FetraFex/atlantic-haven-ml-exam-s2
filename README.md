@@ -28,10 +28,10 @@ Merci de lister tous les membres de l’équipe ayant effectivement participé a
 
 #### Membre 3
 
-- nom : *(à renseigner)*
-- prénom(s) : *(à renseigner)*
-- classe : Master 1 ML & DS
-- numéro : *(à renseigner)*
+- nom : ANDRIANARAHINJAKA
+- prénom(s) : Yohannee Aintsoa
+- classe : IGGLIA 4
+- numéro : 54
 - rôle : ML Engineer — baseline & validation temporelle (pipeline, logistic regression, split)
 
 #### Membre 4
