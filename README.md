@@ -22,7 +22,7 @@ Merci de lister tous les membres de l’équipe ayant effectivement participé a
 
 - nom : ANDRIANTSOA
 - prénom(s) : Velotiana Todisoa Angelo
-- classe : Master 1 ML & DS
+- classe : IGGLIA 4
 - numéro : 22
 - rôle : Data Analyst — EDA (cible, manquants, scénarios d’annulation, figures)
 
