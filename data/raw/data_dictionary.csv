@@ -1,0 +1,35 @@
+variable,type,description,fichier_test
+reservation_id,identifiant,Identifiant unique de la réservation,oui
+date_reservation,date,Date de création de la réservation,oui
+date_arrivee,date,Date d’arrivée prévue,oui
+region_hotel,catégorielle,Région administrative italienne de l’hôtel,oui
+ville,catégorielle,Ville principale associée à l’établissement,oui
+type_destination,catégorielle,Profil touristique dominant de la destination,oui
+hotel_id,catégorielle,Identifiant synthétique de l’hôtel,oui
+categorie_hotel,entier,"Catégorie de l’hôtel, en étoiles",oui
+segment_client,catégorielle,Motif ou composition principale du séjour,oui
+marche_origine,catégorielle,"Grande zone de marché, non assimilable à une nationalité",oui
+canal_reservation,catégorielle,Canal utilisé pour réserver,oui
+moyen_transport,catégorielle,Transport principal prévu,oui
+delai_reservation_jours,entier,Jours entre réservation et arrivée,oui
+nuits,entier,Nombre de nuits prévues,oui
+adultes,entier,Nombre d’adultes,oui
+enfants,entier,Nombre d’enfants; valeurs manquantes possibles,oui
+chambres,entier,Nombre de chambres,oui
+formule_repas,catégorielle,Formule de restauration,oui
+tarif_remboursable,binaire texte,Indique si le tarif est remboursable,oui
+type_acompte,catégorielle,Niveau d’acompte demandé,oui
+prix_moyen_nuit_eur,décimal,Prix moyen d’une nuit en euros; valeurs manquantes possibles,oui
+remise_pct,entier,Remise commerciale en pourcentage,oui
+montant_total_eur,décimal,Montant total initial de la réservation,oui
+client_type,catégorielle,Statut synthétique de la relation client,oui
+reservations_passees,entier,Nombre de réservations précédentes,oui
+annulations_passees,entier,Nombre d’annulations précédentes,oui
+demandes_speciales,entier,Nombre de demandes spéciales; valeurs manquantes possibles,oui
+modifications_reservation,entier,Nombre de modifications avant la date d’extraction,oui
+jours_liste_attente,entier,Durée passée en liste d’attente,oui
+evenement_majeur,binaire,Événement important connu lors de la réservation,oui
+haute_saison_regionale,binaire,Arrivée pendant la haute saison propre à la région,oui
+arrivee_weekend,binaire,Arrivée un vendredi ou samedi,oui
+agent_id,catégorielle,Identifiant de l’intermédiaire; vide pour une réservation directe,oui
+reservation_annulee,binaire,"Cible: 1 si annulée, 0 sinon",non

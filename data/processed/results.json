@@ -1,0 +1,711 @@
+{
+  "eda": {
+    "train_shape": [
+      8000,
+      34
+    ],
+    "test_shape": [
+      2000,
+      33
+    ],
+    "cancel_rate": 0.258375,
+    "train_period": [
+      "2023-01-01",
+      "2025-05-24"
+    ],
+    "test_period": [
+      "2025-05-24",
+      "2025-12-31"
+    ],
+    "missing_train": {
+      "marche_origine": 191,
+      "enfants": 355,
+      "prix_moyen_nuit_eur": 193,
+      "demandes_speciales": 157,
+      "agent_id": 3354
+    },
+    "agent_id_empty_train": 3354,
+    "dup_id_train": 0,
+    "dup_id_test": 0,
+    "rate_by_canal_reservation": {
+      "plateforme_en_ligne": {
+        "rate": 0.3044263775971093,
+        "n": 3321
+      },
+      "agence": {
+        "rate": 0.27773584905660376,
+        "n": 1325
+      },
+      "telephone": {
+        "rate": 0.22948539638386647,
+        "n": 719
+      },
+      "site_hotel": {
+        "rate": 0.21510183805265773,
+        "n": 2013
+      },
+      "entreprise": {
+        "rate": 0.14469453376205788,
+        "n": 622
+      }
+    },
+    "rate_by_type_acompte": {
+      "aucun": {
+        "rate": 0.34002607561929593,
+        "n": 3835
+      },
+      "partiel": {
+        "rate": 0.23000382701875238,
+        "n": 2613
+      },
+      "total": {
+        "rate": 0.10438144329896908,
+        "n": 1552
+      }
+    },
+    "rate_by_tarif_remboursable": {
+      "oui": {
+        "rate": 0.31271665754424377,
+        "n": 5481
+      },
+      "non": {
+        "rate": 0.14013497419610957,
+        "n": 2519
+      }
+    },
+    "rate_by_type_destination": {
+      "urbaine_cotiere": {
+        "rate": 0.28388746803069054,
+        "n": 782
+      },
+      "insulaire_balneaire": {
+        "rate": 0.28134556574923547,
+        "n": 327
+      },
+      "insulaire_mixte": {
+        "rate": 0.26978998384491115,
+        "n": 619
+      },
+      "urbaine_culturelle": {
+        "rate": 0.26389918458117123,
+        "n": 1349
+      },
+      "urbaine_littorale": {
+        "rate": 0.26061204343534056,
+        "n": 1013
+      },
+      "affaires_lacs": {
+        "rate": 0.2545454545454545,
+        "n": 1100
+      },
+      "montagne": {
+        "rate": 0.24962178517397882,
+        "n": 661
+      },
+      "culturelle_rurale": {
+        "rate": 0.24846625766871167,
+        "n": 978
+      },
+      "balneaire_rurale": {
+        "rate": 0.24,
+        "n": 525
+      },
+      "littorale": {
+        "rate": 0.23529411764705882,
+        "n": 646
+      }
+    },
+    "rate_by_client_type": {
+      "fidele": {
+        "rate": 0.2611570247933884,
+        "n": 2420
+      },
+      "nouveau": {
+        "rate": 0.26090420235012945,
+        "n": 5021
+      },
+      "entreprise": {
+        "rate": 0.22361359570661896,
+        "n": 559
+      }
+    }
+  },
+  "split": {
+    "time_col": "date_reservation",
+    "val_ratio": 0.2,
+    "train_period": [
+      "2023-01-01",
+      "2024-11-28"
+    ],
+    "valid_period": [
+      "2024-11-28",
+      "2025-05-24"
+    ],
+    "train_n": 6400,
+    "valid_n": 1600,
+    "train_cancel_rate": 0.2559375,
+    "valid_cancel_rate": 0.268125
+  },
+  "ablation": [
+    {
+      "config": "sans_fe",
+      "n_features": 29,
+      "f1": 0.4736111111111111,
+      "precision": 0.33728981206726016,
+      "recall": 0.7948717948717948,
+      "threshold": 0.38999999999999996,
+      "delta_f1": 0.0
+    },
+    {
+      "config": "groupe_dates",
+      "n_features": 39,
+      "f1": 0.4709851551956815,
+      "precision": 0.33143399810066476,
+      "recall": 0.8135198135198135,
+      "threshold": 0.37999999999999995,
+      "delta_f1": -0.0026259559154295786
+    },
+    {
+      "config": "groupe_sejour",
+      "n_features": 34,
+      "f1": 0.47124047124047125,
+      "precision": 0.33530571992110453,
+      "recall": 0.7925407925407926,
+      "threshold": 0.38999999999999996,
+      "delta_f1": -0.0023706398706398457
+    },
+    {
+      "config": "groupe_prix",
+      "n_features": 35,
+      "f1": 0.4710801393728223,
+      "precision": 0.3359840954274354,
+      "recall": 0.7878787878787878,
+      "threshold": 0.38999999999999996,
+      "delta_f1": -0.002530971738288812
+    },
+    {
+      "config": "groupe_historique",
+      "n_features": 32,
+      "f1": 0.4757834757834758,
+      "precision": 0.3425641025641026,
+      "recall": 0.7785547785547785,
+      "threshold": 0.3999999999999999,
+      "delta_f1": 0.0021723646723647017
+    },
+    {
+      "config": "groupe_interactions",
+      "n_features": 35,
+      "f1": 0.4729824561403509,
+      "precision": 0.33835341365461846,
+      "recall": 0.7855477855477856,
+      "threshold": 0.38999999999999996,
+      "delta_f1": -0.0006286549707602007
+    },
+    {
+      "config": "toutes_fe",
+      "n_features": 59,
+      "f1": 0.4759080800593032,
+      "precision": 0.34891304347826085,
+      "recall": 0.7482517482517482,
+      "threshold": 0.42999999999999994,
+      "delta_f1": 0.0022969689481920907
+    }
+  ],
+  "leakage_checklist": [
+    {
+      "groupe": "dates",
+      "variables": "annee_reservation, mois_reservation, mois_arrivee, trimestre_arrivee, saison_arrivee, jour_semaine_arrivee, arrivee_weekend_calc, delai_calcule, delai_court, delai_long",
+      "utilise_cible": false,
+      "utilise_futur": false,
+      "commentaire": "Calculées uniquement à partir des colonnes disponibles au moment de la réservation / sur la ligne courante."
+    },
+    {
+      "groupe": "sejour",
+      "variables": "taille_groupe, enfants_presents, personnes_par_chambre, nuits_par_chambre, sejour_long",
+      "utilise_cible": false,
+      "utilise_futur": false,
+      "commentaire": "Calculées uniquement à partir des colonnes disponibles au moment de la réservation / sur la ligne courante."
+    },
+    {
+      "groupe": "prix",
+      "variables": "prix_par_personne, prix_par_nuit_calc, montant_apres_remise, remise_forte, tarif_flexible, sans_acompte",
+      "utilise_cible": false,
+      "utilise_futur": false,
+      "commentaire": "Calculées uniquement à partir des colonnes disponibles au moment de la réservation / sur la ligne courante."
+    },
+    {
+      "groupe": "historique",
+      "variables": "taux_annulation_passe, client_jamais_reserve, a_deja_annule",
+      "utilise_cible": false,
+      "utilise_futur": false,
+      "commentaire": "Calculées uniquement à partir des colonnes disponibles au moment de la réservation / sur la ligne courante."
+    },
+    {
+      "groupe": "interactions",
+      "variables": "lead_x_remboursable, saison_x_nuits, nouveau_x_plateforme, acompte_x_delai, engagement_score, agent_manquant",
+      "utilise_cible": false,
+      "utilise_futur": false,
+      "commentaire": "Calculées uniquement à partir des colonnes disponibles au moment de la réservation / sur la ligne courante."
+    }
+  ],
+  "metrics_table": [
+    {
+      "modele": "random_forest",
+      "f1": 0.47750865051903113,
+      "precision": 0.3395669291338583,
+      "recall": 0.8041958041958042,
+      "pr_auc": 0.35480700123511094,
+      "roc_auc": 0.6409121763519714,
+      "seuil": 0.32999999999999996,
+      "temps_s": 3.608302606997313,
+      "f1_seuil_05": 0.3792697290930506
+    },
+    {
+      "modele": "logistic_regression",
+      "f1": 0.4759080800593032,
+      "precision": 0.34891304347826085,
+      "recall": 0.7482517482517482,
+      "pr_auc": 0.39320178823936186,
+      "roc_auc": 0.6544363692100669,
+      "seuil": 0.42999999999999994,
+      "temps_s": 1.4132077879912686,
+      "f1_seuil_05": 0.45233968804159447
+    },
+    {
+      "modele": "xgboost",
+      "f1": 0.458307597282273,
+      "precision": 0.31176470588235294,
+      "recall": 0.8648018648018648,
+      "pr_auc": 0.3542075671389799,
+      "roc_auc": 0.6264285102884591,
+      "seuil": 0.16999999999999998,
+      "temps_s": 1.425835294998251,
+      "f1_seuil_05": 0.3923337091319053
+    },
+    {
+      "modele": "hist_gradient_boosting",
+      "f1": 0.45765998707175176,
+      "precision": 0.31663685152057247,
+      "recall": 0.8251748251748252,
+      "pr_auc": 0.3590803395391339,
+      "roc_auc": 0.6268803783748276,
+      "seuil": 0.20999999999999996,
+      "temps_s": 2.7175516790011898,
+      "f1_seuil_05": 0.4
+    },
+    {
+      "modele": "lightgbm",
+      "f1": 0.4557739557739558,
+      "precision": 0.3094245204336947,
+      "recall": 0.8648018648018648,
+      "pr_auc": 0.35361950889662347,
+      "roc_auc": 0.6219715382823838,
+      "seuil": 0.13,
+      "temps_s": 1.0272262799844611,
+      "f1_seuil_05": 0.375
+    }
+  ],
+  "best_model": "random_forest",
+  "threshold": 0.32999999999999996,
+  "best_metrics": {
+    "threshold": 0.32999999999999996,
+    "f1": 0.47750865051903113,
+    "precision": 0.3395669291338583,
+    "recall": 0.8041958041958042,
+    "pr_auc": 0.35480700123511094,
+    "roc_auc": 0.6409121763519714,
+    "confusion_matrix": [
+      [
+        500,
+        671
+      ],
+      [
+        84,
+        345
+      ]
+    ],
+    "classification_report": "              precision    recall  f1-score   support\n\n           0     0.8562    0.4270    0.5698      1171\n           1     0.3396    0.8042    0.4775       429\n\n    accuracy                         0.5281      1600\n   macro avg     0.5979    0.6156    0.5237      1600\nweighted avg     0.7177    0.5281    0.5451      1600\n"
+  },
+  "baseline_lr": {
+    "threshold": 0.42999999999999994,
+    "f1": 0.4759080800593032,
+    "precision": 0.34891304347826085,
+    "recall": 0.7482517482517482,
+    "pr_auc": 0.39320178823936186,
+    "roc_auc": 0.6544363692100669,
+    "confusion_matrix": [
+      [
+        572,
+        599
+      ],
+      [
+        108,
+        321
+      ]
+    ],
+    "classification_report": "              precision    recall  f1-score   support\n\n           0     0.8412    0.4885    0.6180      1171\n           1     0.3489    0.7483    0.4759       429\n\n    accuracy                         0.5581      1600\n   macro avg     0.5950    0.6184    0.5470      1600\nweighted avg     0.7092    0.5581    0.5799      1600\n"
+  },
+  "baseline_lr_05": {
+    "threshold": 0.5,
+    "f1": 0.45233968804159447,
+    "precision": 0.36,
+    "recall": 0.6083916083916084,
+    "pr_auc": 0.39320178823936186,
+    "roc_auc": 0.6544363692100669,
+    "confusion_matrix": [
+      [
+        707,
+        464
+      ],
+      [
+        168,
+        261
+      ]
+    ],
+    "classification_report": "              precision    recall  f1-score   support\n\n           0     0.8080    0.6038    0.6911      1171\n           1     0.3600    0.6084    0.4523       429\n\n    accuracy                         0.6050      1600\n   macro avg     0.5840    0.6061    0.5717      1600\nweighted avg     0.6879    0.6050    0.6271      1600\n"
+  },
+  "top_features": [
+    {
+      "feature": "type_acompte",
+      "importance": 0.06781711166129642
+    },
+    {
+      "feature": "acompte_x_delai",
+      "importance": 0.048294322967543504
+    },
+    {
+      "feature": "tarif_remboursable",
+      "importance": 0.039711173939222785
+    },
+    {
+      "feature": "sans_acompte",
+      "importance": 0.02665508145003843
+    },
+    {
+      "feature": "lead_x_remboursable",
+      "importance": 0.01962189388986506
+    },
+    {
+      "feature": "tarif_flexible",
+      "importance": 0.01327009448499623
+    },
+    {
+      "feature": "canal_reservation",
+      "importance": 0.008447544819432462
+    },
+    {
+      "feature": "demandes_speciales",
+      "importance": 0.00838954691966115
+    },
+    {
+      "feature": "remise_forte",
+      "importance": 0.007014033171685574
+    },
+    {
+      "feature": "reservations_passees",
+      "importance": 0.005947967773014917
+    },
+    {
+      "feature": "prix_moyen_nuit_eur",
+      "importance": 0.005618651806573072
+    },
+    {
+      "feature": "prix_par_nuit_calc",
+      "importance": 0.005423422441462178
+    },
+    {
+      "feature": "moyen_transport",
+      "importance": 0.0053050695642953396
+    },
+    {
+      "feature": "agent_manquant",
+      "importance": 0.004767913552164471
+    },
+    {
+      "feature": "annulations_passees",
+      "importance": 0.00435925909712207
+    },
+    {
+      "feature": "client_type",
+      "importance": 0.003949565280152345
+    },
+    {
+      "feature": "a_deja_annule",
+      "importance": 0.0035032827136850853
+    },
+    {
+      "feature": "nuits",
+      "importance": 0.0034720052545122114
+    },
+    {
+      "feature": "type_destination",
+      "importance": 0.0028003384750522773
+    },
+    {
+      "feature": "arrivee_weekend_calc",
+      "importance": 0.0025269618585279873
+    }
+  ],
+  "false_positives": [
+    {
+      "reservation_id": "R005310",
+      "region_hotel": "Sicilia",
+      "type_destination": "insulaire_mixte",
+      "canal_reservation": "agence",
+      "tarif_remboursable": "oui",
+      "type_acompte": "aucun",
+      "delai_reservation_jours": 98,
+      "client_type": "nouveau",
+      "proba": 0.759797976196026
+    },
+    {
+      "reservation_id": "R000682",
+      "region_hotel": "Lazio",
+      "type_destination": "urbaine_culturelle",
+      "canal_reservation": "plateforme_en_ligne",
+      "tarif_remboursable": "oui",
+      "type_acompte": "aucun",
+      "delai_reservation_jours": 93,
+      "client_type": "nouveau",
+      "proba": 0.7464593239312487
+    },
+    {
+      "reservation_id": "R001206",
+      "region_hotel": "Sicilia",
+      "type_destination": "insulaire_mixte",
+      "canal_reservation": "plateforme_en_ligne",
+      "tarif_remboursable": "oui",
+      "type_acompte": "aucun",
+      "delai_reservation_jours": 71,
+      "client_type": "nouveau",
+      "proba": 0.7353417443654183
+    },
+    {
+      "reservation_id": "R002897",
+      "region_hotel": "Veneto",
+      "type_destination": "urbaine_littorale",
+      "canal_reservation": "plateforme_en_ligne",
+      "tarif_remboursable": "oui",
+      "type_acompte": "aucun",
+      "delai_reservation_jours": 91,
+      "client_type": "nouveau",
+      "proba": 0.735286776786926
+    },
+    {
+      "reservation_id": "R006211",
+      "region_hotel": "Trentino-Alto_Adige",
+      "type_destination": "montagne",
+      "canal_reservation": "plateforme_en_ligne",
+      "tarif_remboursable": "oui",
+      "type_acompte": "aucun",
+      "delai_reservation_jours": 84,
+      "client_type": "fidele",
+      "proba": 0.7316555453935476
+    }
+  ],
+  "false_negatives": [
+    {
+      "reservation_id": "R009204",
+      "region_hotel": "Toscana",
+      "type_destination": "culturelle_rurale",
+      "canal_reservation": "site_hotel",
+      "tarif_remboursable": "non",
+      "type_acompte": "total",
+      "delai_reservation_jours": 29,
+      "client_type": "fidele",
+      "proba": 0.10319158924827079
+    },
+    {
+      "reservation_id": "R001185",
+      "region_hotel": "Liguria",
+      "type_destination": "littorale",
+      "canal_reservation": "site_hotel",
+      "tarif_remboursable": "non",
+      "type_acompte": "total",
+      "delai_reservation_jours": 34,
+      "client_type": "nouveau",
+      "proba": 0.11067675610437913
+    },
+    {
+      "reservation_id": "R001223",
+      "region_hotel": "Lombardia",
+      "type_destination": "affaires_lacs",
+      "canal_reservation": "entreprise",
+      "tarif_remboursable": "non",
+      "type_acompte": "total",
+      "delai_reservation_jours": 41,
+      "client_type": "nouveau",
+      "proba": 0.14314061257171554
+    },
+    {
+      "reservation_id": "R001479",
+      "region_hotel": "Trentino-Alto_Adige",
+      "type_destination": "montagne",
+      "canal_reservation": "agence",
+      "tarif_remboursable": "non",
+      "type_acompte": "partiel",
+      "delai_reservation_jours": 25,
+      "client_type": "fidele",
+      "proba": 0.14628496651568196
+    },
+    {
+      "reservation_id": "R002592",
+      "region_hotel": "Sicilia",
+      "type_destination": "insulaire_mixte",
+      "canal_reservation": "entreprise",
+      "tarif_remboursable": "non",
+      "type_acompte": "partiel",
+      "delai_reservation_jours": 24,
+      "client_type": "fidele",
+      "proba": 0.14712725373144114
+    }
+  ],
+  "region_stats": [
+    {
+      "groupe": "region_hotel",
+      "valeur": "Campania",
+      "n": 169,
+      "f1": 0.40268456375838924,
+      "cancel_rate": 0.23076923076923078
+    },
+    {
+      "groupe": "region_hotel",
+      "valeur": "Lazio",
+      "n": 258,
+      "f1": 0.4444444444444444,
+      "cancel_rate": 0.22868217054263565
+    },
+    {
+      "groupe": "region_hotel",
+      "valeur": "Liguria",
+      "n": 127,
+      "f1": 0.48214285714285715,
+      "cancel_rate": 0.2677165354330709
+    },
+    {
+      "groupe": "region_hotel",
+      "valeur": "Lombardia",
+      "n": 216,
+      "f1": 0.5052631578947369,
+      "cancel_rate": 0.2777777777777778
+    },
+    {
+      "groupe": "region_hotel",
+      "valeur": "Puglia",
+      "n": 99,
+      "f1": 0.4810126582278481,
+      "cancel_rate": 0.25252525252525254
+    },
+    {
+      "groupe": "region_hotel",
+      "valeur": "Sardegna",
+      "n": 67,
+      "f1": 0.4666666666666667,
+      "cancel_rate": 0.2835820895522388
+    },
+    {
+      "groupe": "region_hotel",
+      "valeur": "Sicilia",
+      "n": 121,
+      "f1": 0.5648854961832062,
+      "cancel_rate": 0.371900826446281
+    },
+    {
+      "groupe": "region_hotel",
+      "valeur": "Toscana",
+      "n": 188,
+      "f1": 0.4470588235294118,
+      "cancel_rate": 0.26063829787234044
+    },
+    {
+      "groupe": "region_hotel",
+      "valeur": "Trentino-Alto_Adige",
+      "n": 141,
+      "f1": 0.5401459854014599,
+      "cancel_rate": 0.2907801418439716
+    },
+    {
+      "groupe": "region_hotel",
+      "valeur": "Veneto",
+      "n": 214,
+      "f1": 0.46875,
+      "cancel_rate": 0.27102803738317754
+    },
+    {
+      "groupe": "type_destination",
+      "valeur": "affaires_lacs",
+      "n": 216,
+      "f1": 0.5052631578947369,
+      "cancel_rate": 0.2777777777777778
+    },
+    {
+      "groupe": "type_destination",
+      "valeur": "balneaire_rurale",
+      "n": 99,
+      "f1": 0.4810126582278481,
+      "cancel_rate": 0.25252525252525254
+    },
+    {
+      "groupe": "type_destination",
+      "valeur": "culturelle_rurale",
+      "n": 188,
+      "f1": 0.4470588235294118,
+      "cancel_rate": 0.26063829787234044
+    },
+    {
+      "groupe": "type_destination",
+      "valeur": "insulaire_balneaire",
+      "n": 67,
+      "f1": 0.4666666666666667,
+      "cancel_rate": 0.2835820895522388
+    },
+    {
+      "groupe": "type_destination",
+      "valeur": "insulaire_mixte",
+      "n": 121,
+      "f1": 0.5648854961832062,
+      "cancel_rate": 0.371900826446281
+    },
+    {
+      "groupe": "type_destination",
+      "valeur": "littorale",
+      "n": 127,
+      "f1": 0.48214285714285715,
+      "cancel_rate": 0.2677165354330709
+    },
+    {
+      "groupe": "type_destination",
+      "valeur": "montagne",
+      "n": 141,
+      "f1": 0.5401459854014599,
+      "cancel_rate": 0.2907801418439716
+    },
+    {
+      "groupe": "type_destination",
+      "valeur": "urbaine_cotiere",
+      "n": 169,
+      "f1": 0.40268456375838924,
+      "cancel_rate": 0.23076923076923078
+    },
+    {
+      "groupe": "type_destination",
+      "valeur": "urbaine_culturelle",
+      "n": 258,
+      "f1": 0.4444444444444444,
+      "cancel_rate": 0.22868217054263565
+    },
+    {
+      "groupe": "type_destination",
+      "valeur": "urbaine_littorale",
+      "n": 214,
+      "f1": 0.46875,
+      "cancel_rate": 0.27102803738317754
+    }
+  ],
+  "submission": {
+    "n_rows": 2000,
+    "positive_rate": 0.6285,
+    "proba_min": 0.061273708369616084,
+    "proba_max": 0.7683410257026116
+  }
+}
