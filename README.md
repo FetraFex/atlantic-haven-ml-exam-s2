@@ -12,10 +12,10 @@ Merci de lister tous les membres de l’équipe ayant effectivement participé a
 
 #### Membre 1
 
-- nom : *(à renseigner)*
-- prénom(s) : *(à renseigner)*
-- classe : Master 1 ML & DS
-- numéro : *(à renseigner)*
+- nom : ANDRIAMAHEFA 
+- prénom(s) : Ny Fetra Phanoël
+- classe : IGGLIA 4
+- numéro : 16
 - rôle : Data Engineer & Chef de projet (structure dépôt, utils, intégration notebook, checklist)
 
 #### Membre 2
@@ -36,34 +36,34 @@ Merci de lister tous les membres de l’équipe ayant effectivement participé a
 
 #### Membre 4
 
-- nom : *(à renseigner)*
-- prénom(s) : *(à renseigner)*
-- classe : Master 1 ML & DS
-- numéro : *(à renseigner)*
+- nom : LAPORTE
+- prénom(s) :  Hantaharimanana Marie Fabia
+- classe : IGGLIA 4
+- numéro : 53
 - rôle : Feature Engineer (variables dérivées, anti-fuite, ablation F1)
 
 #### Membre 5
 
-- nom : *(à renseigner)*
-- prénom(s) : *(à renseigner)*
-- classe : Master 1 ML & DS
-- numéro : *(à renseigner)*
+- nom : RASOAMAHAZOMANANA
+- prénom(s) :  Tsitoniaina Rogella
+- classe : IGGLIA 4
+- numéro : 15
 - rôle : Lead Data Scientist (modèles alternatifs, seuil, sélection, submission)
 
 #### Membre 6
 
-- nom : *(à renseigner)*
-- prénom(s) : *(à renseigner)*
-- classe : Master 1 ML & DS
-- numéro : *(à renseigner)*
+- nom : NOMESAHANINA 	
+- prénom(s) : Aiky
+- classe : IGGLIA 4
+- numéro : 35
 - rôle : Analyste métier & rédacteur technique (README, Q1–Q9, recommandations)
 
 #### Membre 7
 
-- nom : *(à renseigner)*
-- prénom(s) : *(à renseigner)*
-- classe : Master 1 ML & DS
-- numéro : *(à renseigner)*
+- nom : RAKOTOARISOA 
+- prénom(s) : Fanaja Manoa Ny Avo
+- classe : IGGLIA 4
+- numéro : 32
 - rôle : Analyse d’erreurs & communicant vidéo (FP/FN, script 3–5 min)
 
 ---
